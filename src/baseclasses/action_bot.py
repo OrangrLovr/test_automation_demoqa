@@ -99,3 +99,11 @@ class ActionBot:
         except NoSuchElementException:
             return False
         return True
+
+    def is_equal_to_the_text_in_the_block_element(self, how, what, text):
+        try:
+            result = self.driver.find_element(how, what).text
+            if result.lower() == text.lower():
+                return True
+        except NoSuchElementException:
+            return False

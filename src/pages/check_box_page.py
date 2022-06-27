@@ -1,6 +1,3 @@
-import pytest
-from selenium.webdriver.common.by import By
-
 from src.baseclasses.action_bot import ActionBot
 from src.locators.locators import CheckBoxLocators
 

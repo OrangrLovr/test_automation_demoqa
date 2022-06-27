@@ -26,3 +26,11 @@ class CheckBoxLocators:
 
     # react icon expand with error
     RCT_ICON_EXPAND_ALL_ERROR = (By.CSS_SELECTOR, ".rct-icon.rct-icon-expand-all-error")
+
+
+class RadioButtonLocators:
+    RADIO_BUTTON_YES = (By.CSS_SELECTOR, "input#yesRadio")
+    RADIO_BUTTON_IMPRESSIVE = (By.CSS_SELECTOR, "input#impressiveRadio")
+    RADIO_BUTTON_NO = (By.CSS_SELECTOR, "input#noRadio")
+
+    RADIO_BUTTON_TEXT_SUCCESS_FORM = (By.CSS_SELECTOR, "span.text-success")
