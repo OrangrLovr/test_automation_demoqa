@@ -2,6 +2,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import Select
 
 
 class ActionBot:
@@ -12,6 +13,16 @@ class ActionBot:
 
     def open(self):
         self.driver.get(self.url)
+
+    def is_element_visible(self, how, what, timeout=5):
+        return WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located((how, what)))
+
+    def are_elements_visible(self, how, what, timeout=5):
+        return WebDriverWait(self.driver, timeout).until(EC.visibility_of_all_elements_located((how, what)))
+
+    def remove_footer(self):
+        self.driver.execute_script("document.getElementsByTagName('footer')[0].remove();")
+        self.driver.execute_script('document.getElementById("fixedban").style.display="none"')
 
     def is_element_present(self, how, what):
         try:
@@ -29,7 +40,8 @@ class ActionBot:
 
     def is_element_dissappeared(self, how, what, timeout=6):
         try:
-            WebDriverWait(self.driver, timeout, 1, TimeoutException).until_not(EC.presence_of_element_located((how, what)))
+            WebDriverWait(self.driver, timeout, 1, TimeoutException).until_not(EC.presence_of_element_located(
+                (how, what)))
         except TimeoutError:
             return False
         return True
@@ -47,6 +59,41 @@ class ActionBot:
         try:
             elem = self.driver.find_element(how, what)
             ActionChains(self.driver).click(elem).perform()
+        except NoSuchElementException:
+            return False
+        return True
+
+    def is_element_key_down_and_send_keys(self, system_button, key):
+        try:
+            ActionChains(self.driver)\
+                .key_down(system_button)\
+                .send_keys(key)\
+                .key_up(key)\
+                .perform()
+        except NoSuchElementException:
+            return False
+        return True
+
+    def is_element_key_down_and_key_up(self, system_button):
+        try:
+            ActionChains(self.driver)\
+                .key_down(system_button)\
+                .key_up(system_button)\
+                .perform()
+        except NoSuchElementException:
+            return False
+        return True
+
+    def is_element_select(self, how, what, select_option, value):
+        try:
+            elem = self.driver.find_element(how, what)
+            select = Select(elem)
+            if select_option == "text":
+                select.select_by_visible_text(value)
+            elif select_option == "value":
+                select.select_by_value(value)
+            elif select_option == "index":
+                select.select_by_index(value)
         except NoSuchElementException:
             return False
         return True

@@ -1,4 +1,4 @@
-from src.schemas.data_user import TextBoxDataUser
+from src.generator.data_user import TextBoxDataUser
 from src.locators.locators import TextBoxLocators
 from src.baseclasses.action_bot import ActionBot
 

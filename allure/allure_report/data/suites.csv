@@ -1,14 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"skipped","Mon Jun 27 14:54:54 CEST 2022","Mon Jun 27 14:54:57 CEST 2022","3490","tests","test_elements_page","","","","test_should_be_check_each_element_by_the_names_of_the_checkboxes","
-    The test is initially a failure for demonstration.
-    "
-"passed","Mon Jun 27 14:55:08 CEST 2022","Mon Jun 27 14:55:11 CEST 2022","2898","tests","test_elements_page","","","","test_should_be_check_the_existence_all_radio_buttons","
-The test includes checking the radio button elements.
-Elements: ""Yes"" button, ""Impressive"" button, ""No"" button, block with successful text output.
-"
-"passed","Mon Jun 27 14:54:24 CEST 2022","Mon Jun 27 14:54:29 CEST 2022","4837","tests","test_elements_page","","","","test_should_be_enter_data_user_into_the_text_field_box_page","
-    The test enters user data into a text block.
-    "
 "passed","Mon Jun 27 14:55:21 CEST 2022","Mon Jun 27 14:55:24 CEST 2022","3523","tests","test_elements_page","","","","test_should_be_success_click_on_the_yes_radio_button","
     Check exists:
 
@@ -17,6 +7,42 @@ Elements: ""Yes"" button, ""Impressive"" button, ""No"" button, block with succe
     - the elements is selected;
     - the output result 'yes' of the ""successful message"".
     "
+"passed","Mon Jun 27 14:54:39 CEST 2022","Mon Jun 27 14:54:43 CEST 2022","4037","tests","test_elements_page","","","","test_should_be_click_all_check_boxes","
+    The test finds and checks the checkbox.
+    "
+"skipped","Mon Jun 27 14:54:54 CEST 2022","Mon Jun 27 14:54:57 CEST 2022","3490","tests","test_elements_page","","","","test_should_be_check_each_element_by_the_names_of_the_checkboxes","
+    The test is initially a failure for demonstration.
+    "
+"passed","Mon Jun 27 14:54:24 CEST 2022","Mon Jun 27 14:54:29 CEST 2022","4837","tests","test_elements_page","","","","test_should_be_enter_data_user_into_the_text_field_box_page","
+    The test enters user data into a text block.
+    "
+"failed","Mon Jun 27 14:57:43 CEST 2022","Mon Jun 27 14:57:46 CEST 2022","3203","tests","test_elements_page","","","","test_should_be_not_success_click_on_the_no_radio_button","
+    Check exists:
+
+    - the operation of the radio button;
+    - the element is not selected.
+    "
+"passed","Wed Jun 29 21:11:40 CEST 2022","Wed Jun 29 21:11:48 CEST 2022","8499","tests","test_forms_page","TestFormPage","","","!!!The test fills out the registration form (is under development).","The test is under development.
+
+            Check exists:
+            - there is an input field ""first name"";
+            - there is an input field ""last name"";
+            - there is an input field ""email"";
+            - there is a radio button ""gender"";
+            - there is an input field ""mobile"";
+            - there is a check boxes ""hobbies"";
+            - there is an input field ""current address"";
+            - there is a selector ""state and city""
+
+            Not verified:
+            - field ""date of birth"";
+            - field ""subjects"";
+            - field ""select picture""
+        "
+"passed","Mon Jun 27 14:55:08 CEST 2022","Mon Jun 27 14:55:11 CEST 2022","2898","tests","test_elements_page","","","","test_should_be_check_the_existence_all_radio_buttons","
+The test includes checking the radio button elements.
+Elements: ""Yes"" button, ""Impressive"" button, ""No"" button, block with successful text output.
+"
 "passed","Mon Jun 27 14:55:34 CEST 2022","Mon Jun 27 14:55:38 CEST 2022","3345","tests","test_elements_page","","","","Test to check a successful click on the impressive radio button.","
     Check exists:
 
@@ -24,13 +50,4 @@ Elements: ""Yes"" button, ""Impressive"" button, ""No"" button, block with succe
     - click on an element;
     - the elements is selected;
     - the output result 'impressive' of the ""successful message"".
-    "
-"passed","Mon Jun 27 14:54:39 CEST 2022","Mon Jun 27 14:54:43 CEST 2022","4037","tests","test_elements_page","","","","test_should_be_click_all_check_boxes","
-    The test finds and checks the checkbox.
-    "
-"failed","Mon Jun 27 14:57:43 CEST 2022","Mon Jun 27 14:57:46 CEST 2022","3203","tests","test_elements_page","","","","test_should_be_not_success_click_on_the_no_radio_button","
-    Check exists:
-
-    - the operation of the radio button;
-    - the element is not selected.
     "

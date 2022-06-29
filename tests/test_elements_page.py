@@ -1,5 +1,3 @@
-import allure
-
 from configuration import URL_DEMOQA
 from src.pages.check_box_page import ElementsCheckBoxPage
 from src.pages.text_box_page import ElementsTextBoxPage
@@ -7,6 +5,7 @@ from src.pages.radio_button_page import \
     CheckElementsRadioButtonPage, YesElementRadioButtonPage, ImpressiveElementRadioButtonPage, NoElementRadioButtonPage
 
 import pytest
+import allure
 
 
 @allure.step

@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from random import randint
 
 
 class TextBoxLocators:
@@ -33,4 +34,24 @@ class RadioButtonLocators:
     RADIO_BUTTON_IMPRESSIVE = (By.CSS_SELECTOR, "input#impressiveRadio")
     RADIO_BUTTON_NO = (By.CSS_SELECTOR, "input#noRadio")
 
+    # emerge successful test
     RADIO_BUTTON_TEXT_SUCCESS_FORM = (By.CSS_SELECTOR, "span.text-success")
+
+
+class FormPageLocators:
+    FIRST_NAME = (By.CSS_SELECTOR, "input#firstName")
+    LAST_NAME = (By.CSS_SELECTOR, "input#lastName")
+    EMAIL = (By.CSS_SELECTOR, "input#userEmail")
+    GENDER = (By.CSS_SELECTOR, f"div[class*='custom-control'] label[for='gender-radio-{randint(1, 3)}']")
+    MOBILE = (By.CSS_SELECTOR, "input#userNumber")
+    DATE_OF_BIRTH = (By.CSS_SELECTOR, "input#dateOfBirthInput")
+    SUBJECT = (By.XPATH, "//input[@id='subjectsInput']")
+    HOBBIES = (By.CSS_SELECTOR, f"div[class*='custom-control'] label[for='hobbies-checkbox-{randint(1, 3)}']")
+    FILE_INPUT = (By.CSS_SELECTOR, "input#uploadPicture")
+    CURRENT_ADDRESS = (By.CSS_SELECTOR, "textarea#currentAddress")
+    STATE = (By.CSS_SELECTOR, "div#state")
+    CITY = (By.CSS_SELECTOR, "div#city")
+    SUBMIT = (By.CSS_SELECTOR, "button#submit")
+
+    # emerge results table
+    RESULT_TABLES = (By.XPATH, "//div[@class='table-responsive']//td[2]")
